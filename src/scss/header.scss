@@ -1,14 +1,19 @@
 @import './color.scss';
 
-.header-wrapper{
+.header-section{
+    border-bottom: 1px solid $lightgrey;
+    width: 100%;
+    background: $white;
     position: fixed;
+    z-index: 2;
+}
+.header-wrapper{
     width: 100%;
     display: flex;
-    border-bottom: 1px solid $lightgrey;
     align-items: center;
     padding: 8px 16px;
     justify-content: space-between;
-    background: $white;
+    flex-wrap: wrap;
     @media (min-width:768px){
         padding: 10px 32px;
     }

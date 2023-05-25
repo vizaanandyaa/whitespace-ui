@@ -8,6 +8,10 @@
     font-family: 'Inter';
 }
 
+button{
+    cursor: pointer;
+}
+
 .container{
     @media (min-width:1024px){
         max-width: 1216px;
@@ -15,3 +19,130 @@
     }
 }
 
+.landing{
+    padding: 56px 16px 0;
+    width: 100%;
+    @media(min-width:768px){
+        padding: 64px 32px 0;
+    }
+    @media(min-width:1024px){
+        display: flex;
+    }
+}
+
+.landing-info{
+    margin-bottom: 48px;
+}
+
+
+.landing-title{
+    position: relative;
+    padding-top: 48px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 16px;
+    color: $lightblack2;
+    @media (min-width:768px){
+        padding-top: 64px;
+        font-size: 48px;
+        line-height: 60px;
+    }
+}
+
+.landing-title--underline{
+    position: relative;
+    display: block;
+}
+
+.landing-title--underline p{
+    position: relative;
+    z-index: 1;
+}
+
+.landing-title--underline img{
+    width: 216px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-5px,1px);
+}
+
+.landing-img{
+    @media (min-width:768px){
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.landing-img img{
+    width: 100%;
+    height: 342px;
+    object-fit: cover;
+    object-position: top;
+    @media (min-width:768px){
+        max-width: 500px;
+    }
+}
+
+.paragraph{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $lightblack;
+}
+
+.paragraph--size{
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.landing-btns{
+    margin: 32px 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn{
+    width: 100%;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 0;
+    border-radius: 8px;
+}
+
+.btn--blue{
+    color: $white;
+    background: $brightblue;
+}
+
+.btn--white{
+    color: $lightblack;
+    background:$white;
+    border: 1px solid $gray;
+}
+
+.btn-w-icon{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+}
+
+.play-icon{
+    width: 20px;
+}
+.stars{
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.star{
+    width: 28px;
+}
