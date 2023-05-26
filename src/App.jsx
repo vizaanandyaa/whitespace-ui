@@ -3,6 +3,8 @@ import playIcon from './assets/landing/Play.png'
 import star from './assets/landing/Star.png'
 import landingImg from './assets/landing/landing-img.jpg'
 import underline from './assets/landing/underline.png'
+import chip from './assets/landing/EMV Chip.png'
+import visa from './assets/landing/visa-logo.png'
 import './App.scss'
 function App() {
 
@@ -34,7 +36,14 @@ function App() {
           </div>
         </div>
         <div className="landing-img">
-          <img src={landingImg} alt="" />
+          <img className="landing-img-cover" src={landingImg} alt="" />
+          <div className="landing-card">
+            <p className="landing-card-title">Whitespace UI Bank</p>
+            <img className="landing-card-chip" src={chip} alt="chip"/>
+            <p className="landing-card-num">9876&nbsp;&nbsp;5432&nbsp;&nbsp;1234&nbsp;&nbsp;5678</p>
+            <p className="landing-card-detail">Jenny Wilson <span>05/23</span></p>
+            <img className="landing-card-visa" src={visa} alt="visa" />
+          </div>
         </div>
       </section>
     </>
