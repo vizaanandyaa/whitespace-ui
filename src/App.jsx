@@ -9,17 +9,17 @@ function App() {
   return (
     <>
       <Header/>
-      <section className="landing">
+      <section className="landing container">
         <div className="landing-info">
           <h1 className="landing-title">
-            Everything you need to scale a <span className="landing-title--underline">global team <img src={underline} alt="" /> </span>
+           <span>Everything you need to scale a <span className="landing-title--underline"><p>global&nbsp;</p><img className="title-underline--long" src={underline} alt="" /> </span><span className="landing-title--underline"><p>team</p><img className="title-underline--short" src={underline} alt="" /> </span></span> 
           </h1>
           <p className="paragraph">
           Check out our proven methods, guides, and exercises that help make work better, and people happier.
           </p>
           <div className="landing-btns">
-            <button className="btn btn--blue">Learn more</button>
-            <button className="btn btn--white btn-w-icon">
+            <button className="btn btn--blue landing-btn">Learn more</button>
+            <button className="btn btn--white btn-w-icon landing-btn">
               <img src={playIcon} alt="play-icon" className="play-icon" />
               <p>Watch demo</p> 
             </button>

@@ -6,6 +6,9 @@
     background: $white;
     position: fixed;
     z-index: 2;
+    @media (min-width: 1024px){
+        border-bottom: none;
+    }
 }
 .header-wrapper{
     width: 100%;
@@ -23,7 +26,6 @@
         left: 0;
         margin: 0 auto;
         padding: 18px 24px ;
-        border-bottom: none;
     }
     @media (min-width:1216px){
         padding: 18px 0;
@@ -57,6 +59,9 @@
     padding: 8px 16px;
     height: fit-content;
     border-radius: 8px;
+    @media (min-width: 768px){
+        padding: 10px 20px;
+    }
 }
 
 .header-btn p{
@@ -64,6 +69,10 @@
     line-height: 24px;
     font-weight: 600;
     color: $white;
+    @media (min-width: 1024px){
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
 .header-nav-lists{
