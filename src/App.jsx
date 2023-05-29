@@ -83,6 +83,13 @@ function App() {
           </div>
         </div>
       </section>
+      <section className="compo services container">
+        <div className="compo-headline">
+          <h2 className="compo-headline-title">Streamline your workflow with SaaS: Get started now</h2>
+          <p className="compo-headline-desc">Stay up to date with the most relevant information</p>
+        </div>
+        <div className="compo-contents-flex"></div>
+      </section>
     </>
   )
 }
