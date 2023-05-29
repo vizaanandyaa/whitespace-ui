@@ -5,9 +5,19 @@ import landingImg from './assets/landing/landing-img.jpg'
 import underline from './assets/landing/underline.png'
 import chip from './assets/landing/EMV Chip.png'
 import visa from './assets/landing/visa-logo.png'
+import checkGrad from './assets/features/Check Circle.png'
+import mobileGrad from './assets/features/Mobile.png'
+import emailGrad from './assets/features/Email Open.png'
+import featuresImg1 from './assets/features/features-img1.jpg'
+import featuresImg2 from './assets/features/features-img2.jpg'
+import featuresImg3 from './assets/features/features-img3.jpg'
+import featuresImg4 from './assets/features/features-img4.jpg'
 import './App.scss'
 function App() {
-
+  let featuresContents = [{img:checkGrad,title:'Project Structure',desc:'Check out our proven methods, guides, and exercises that help make work better, and people happier.'},
+  {img:mobileGrad,title:'Responsive',desc:'This Design System and UI kit is coming with full-responsive screens for tablet and mobile devices.'},
+  {img:emailGrad,title:'Messaging',desc:'On mobile, customers can send text, or audio messages to agents, like using any messaging app'}];
+  let featuresImgs = [featuresImg1,featuresImg2,featuresImg3,featuresImg4];
   return (
     <>
       <Header/>
@@ -43,6 +53,33 @@ function App() {
             <p className="landing-card-num">9876&nbsp;&nbsp;5432&nbsp;&nbsp;1234&nbsp;&nbsp;5678</p>
             <p className="landing-card-detail">Jenny Wilson <span>05/23</span></p>
             <img className="landing-card-visa" src={visa} alt="visa" />
+          </div>
+        </div>
+      </section>
+      <section className="compo features container">
+        <div className="compo-headline">
+          <span className="compo-tag">Our Features</span>
+          <h2 className="compo-headline-title">Our key benefit</h2>
+          <p className="compo-headline-desc">Our services are designed to cater to your specific needs and goals</p>
+        </div>
+        <div className="compo-contents-flex">
+          <div className="features-texts">
+            {featuresContents.map((featuresContent,index)=>{
+              return(
+                <div className="features-text" key={index}>
+                  <span className="features-icon"><img src={featuresContent.img}/></span>
+                  <h3 className="features-title">{featuresContent.title}</h3>
+                  <div className="features-desc">{featuresContent.desc}</div>
+                </div>
+              )
+            })}
+          </div>
+          <div className="features-imgs">
+            {featuresImgs.map((featuresImg,index)=>{
+              return(
+                <img key={index} src={featuresImg} className="features-img"/>
+              )
+            })}
           </div>
         </div>
       </section>
