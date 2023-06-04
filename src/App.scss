@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 @import "./scss/header.scss";
+@import "./scss/accordion.scss";
 
 * {
   margin: 0;
@@ -336,6 +337,10 @@ button {
     font-size: 18px;
     line-height: 28px;
   }
+  @media (min-width:1024px) {
+    width: 650px;
+    margin: 0 auto;
+  }
 }
 
 .compo-contents-flex-desktop {
@@ -471,4 +476,10 @@ button {
 
 .services-btns {
   margin-top: 40px;
+}
+
+.accordions{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }

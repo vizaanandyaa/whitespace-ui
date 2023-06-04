@@ -1,0 +1,44 @@
+@import './color.scss';
+
+.no-active{
+    display: none;
+}
+
+.accordion{
+    padding: 16px;
+    border: 1px solid $gray;
+    border-radius: 8px;
+}
+
+.question {
+    background: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.question-text{
+    text-align: start;
+    width: 90%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.question-img{
+    width: 10%;
+    img {
+        display: block;
+        width: 24px;
+        margin-left: auto;
+    }
+} 
+
+.answer-text{
+    padding-top: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
