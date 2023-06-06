@@ -12,6 +12,7 @@ import featuresImg1 from "./assets/features/features-img1.jpg";
 import featuresImg2 from "./assets/features/features-img2.jpg";
 import featuresImg3 from "./assets/features/features-img3.jpg";
 import featuresImg4 from "./assets/features/features-img4.jpg";
+import emailIcon from "./assets/faq/Email.png"
 import Accordion from "./component/Accordion";
 import "./App.scss";
 function App() {
@@ -38,7 +39,13 @@ function App() {
     "Easy Access",
     "14-days free trial",
   ];
-  let questions = ['01. What are properties in Figma?', '02. How Whitespace UI kit and Design System can help me?', '03. What is your return policy?', '04. How can i contact customer support?','05. What payment methods do you accept?']
+  let questions = [
+    "01. What are properties in Figma?",
+    "02. How Whitespace UI kit and Design System can help me?",
+    "03. What is your return policy?",
+    "04. How can i contact customer support?",
+    "05. What payment methods do you accept?",
+  ];
   return (
     <>
       <Header />
@@ -72,7 +79,7 @@ function App() {
           <div className="btns landing-btns">
             <button className="btn btn--blue landing-btn">Learn more</button>
             <button className="btn btn--white btn-w-icon landing-btn">
-              <img src={playIcon} alt="play-icon" className="play-icon" />
+              <img src={playIcon} className="play-icon" />
               <p>Watch demo</p>
             </button>
           </div>
@@ -166,18 +173,23 @@ function App() {
         <div className="compo-headline">
           <h2 className="compo-headline-title">Frequently Asked Questions</h2>
           <p className="compo-headline-desc">
-            We tried to answer most common questions, if you have any additional, please get in touch with our friendly team
+            We tried to answer most common questions, if you have any
+            additional, please get in touch with our friendly team
           </p>
         </div>
         <div className="compo-contents">
           <div className="accordions">
-            {questions.map((question,index)=>{
-    
-              return(
-                <Accordion key={index} quest= {question} />
-              )
-              
+            {questions.map((question, index) => {
+              return <Accordion key={index} quest={question} />;
             })}
+          </div>
+          <div className="modal">
+            <h3 className="modal-title">Still have a questions?</h3>
+            <p className="modal-text">We're sorry we couldn't provide you with the information you were looking for. Please contact us and we'll be happy to help.</p>
+            <button className="btn btn--blue btn-w-icon btn-modal">
+            <img src={emailIcon} className="play-icon" />
+              <p>Contact us</p>
+            </button>
           </div>
         </div>
       </section>
