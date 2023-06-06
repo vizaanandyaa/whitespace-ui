@@ -50,6 +50,8 @@ function App() {
     "04. How can i contact customer support?",
     "05. What payment methods do you accept?",
   ];
+  let blogs = [{title : 'Meet an web designer in his studio in Amsterdam',img : cardImg1, desc:"We'll get to know the designer and their design philosophy, as well as take a look..."},{title : "The Evolution of UI/UX Design: From Skeuomorphism to Flat Design",img:cardImg2,desc:"Discussing the shift from realistic designs to minimalistic, flat designs."},{title:"The Importance of User-Centered Design in IT Projects",img:cardImg3,desc:"Exploring the significance of putting the user first in IT projects"}]
+  let categories = [{type:'ui', text:'UI/UX'},{type:'studio', text:'Studio'},{type:'webDesign', text:'Web Design'}]
   return (
     <>
       <Header />
@@ -205,33 +207,41 @@ function App() {
           Our blog is more than just a collection of articles - it's a hub of ideas, inspiration, and thought-provoking discussions.
           </p>
         </div>
-        <div className="compo-contents-flex-desktop">
-          <div className="compo-card">
-            <a href="#" className="card-img">
-              <img src={cardImg1} alt="card-img" />
-            </a>
-            <div className="card-profile">
-              <div className="profile-img">
-                <img src={ava} alt="ava"/>
+        <div className="compo-contents-flex-desktop compo-blog">
+          {blogs.map((blog,index)=>{
+            return(
+            <div className="compo-card" key={index}>
+              <a href="#" className="card-img">
+                <img src={blog.img} alt="card-img" />
+              </a>
+              <div className="card-profile">
+                <div className="profile-img">
+                  <img src={ava} alt="ava"/>
+                </div>
+                <div className="profile-info">
+                  <h4 className="profile-name">Jenny Wilson</h4>
+                  <h5 className="profile-date">May 9, 2023</h5>
+                </div>
               </div>
-              <div className="profile-info">
-                <h4 className="profile-name">Jenny Wilson</h4>
-                <h5 className="profile-date">May 9, 2023</h5>
+              <a href="#">
+                <h3 className="card-title">{blog.title}</h3>
+              </a>
+              <p className="card-text">{blog.desc}</p>
+              <div className="card-tags">
+                {categories.map((category,index)=>{
+                  return(
+                    <span key={index} className={`card-tag ${category.type}`}>{category.text}</span>
+                  )
+                })}
+                <span className="card-tag --summary">+2</span>
               </div>
             </div>
-            <a href="#">
-              <h3 className="card-title">Meet an web designer in his studio in Amsterdam</h3>
-            </a>
-            <p className="card-text">We'll get to know the designer and their design philosophy, as well as take a look...</p>
-            <div className="card-tags">
-              <span className="card-tag">UI/UX</span>
-              <span className="card-tag">Studio</span>
-              <span className="card-tag">Web Design</span>
-              <span className="card-tag-summary">+2</span>
-            </div>
-          </div>
+            )
+          })}
         </div>
-        <button className="btn btn--blue">Load more</button>
+        <div className="compo-btn">
+          <button className="btn btn--blue">Load more</button>
+        </div>
       </section>
     </>
   );

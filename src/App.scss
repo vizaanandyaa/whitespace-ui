@@ -351,8 +351,11 @@ a{
 }
 
 .compo-contents-flex-desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   @media (min-width: 1024px) {
-    display: flex;
+    flex-direction: row;
     gap: 32px;
     align-items: center;
   }
@@ -571,6 +574,10 @@ a{
   line-height: 28px;
   color: $lightblack2;
   margin-bottom: 10px;
+  @media (min-width: 768px){
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .card-text{
@@ -579,4 +586,61 @@ a{
   line-height: 24px;
   color: $lightblack;
   margin-bottom: 16px;
+  @media (min-width: 768px){
+    margin-bottom: 24px;
+  }
+}
+
+.card-tags{
+  display: flex;
+  gap: 4px;
+  padding-bottom: 16px;
+  @media (min-width:768px){
+    padding-bottom:24px ;
+  }
+}
+
+.card-tag{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 2px 8px;
+  border-radius: 150px;
+  &.--summary{
+    color: $lightblack;
+    background: $lightgrey2;
+  }
+}
+
+.ui{
+  color: $darkblue3;
+  background: $lightblue2;
+}
+
+.studio{
+  color: $blue;
+  background: $lightblue3;
+}
+
+.webDesign{
+  color: $tosca;
+  background: $lighttosca;
+}
+
+.compo-blog{
+  margin-bottom: 16px;
+  align-items: start;
+  @media (min-width:768px){
+    margin-bottom: 32px;
+  }
+  @media (min-width:1024px){
+    padding-top: 32px;
+  }
+}
+
+.compo-btn{
+  @media (min-width:768px){
+    width: fit-content;
+    margin: 0 auto;
+  }
 }
