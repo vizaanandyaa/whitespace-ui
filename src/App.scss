@@ -13,6 +13,10 @@ button {
   cursor: pointer;
 }
 
+a{
+  text-decoration: none;
+}
+
 .container {
   @media (min-width: 1024px) {
     max-width: 1216px;
@@ -519,4 +523,60 @@ button {
 
 .btn-modal{
   margin: 0 auto;
+}
+
+.card-img{
+  margin-bottom: 16px;
+  display: block;
+}
+
+.card-img img{
+  width: 100%;
+  display: block;
+}
+
+.card-profile{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.profile-img{
+  width: 32px;
+}
+
+.profile-img img{
+  width: 100%;
+  display: block;
+}
+
+.profile-name{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $lightblack;
+}
+
+.profile-date{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $gray2;
+}
+
+.card-title{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: $lightblack2;
+  margin-bottom: 10px;
+}
+
+.card-text{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $lightblack;
+  margin-bottom: 16px;
 }

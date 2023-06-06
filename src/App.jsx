@@ -12,6 +12,10 @@ import featuresImg1 from "./assets/features/features-img1.jpg";
 import featuresImg2 from "./assets/features/features-img2.jpg";
 import featuresImg3 from "./assets/features/features-img3.jpg";
 import featuresImg4 from "./assets/features/features-img4.jpg";
+import cardImg1 from "./assets/blog/card-img1.jpg";
+import cardImg2 from "./assets/blog/card-img2.jpg";
+import cardImg3 from "./assets/blog/card-img3.jpg";
+import ava from "./assets/blog/Avatar.jpg"
 import emailIcon from "./assets/faq/Email.png"
 import Accordion from "./component/Accordion";
 import "./App.scss";
@@ -192,6 +196,42 @@ function App() {
             </button>
           </div>
         </div>
+      </section>
+      <section className="compo blog container">
+        <div className="compo-headline --big">
+          <span className="compo-tag">Blog</span>
+          <h2 className="compo-headline-title">Our fresh news</h2>
+          <p className="compo-headline-desc">
+          Our blog is more than just a collection of articles - it's a hub of ideas, inspiration, and thought-provoking discussions.
+          </p>
+        </div>
+        <div className="compo-contents-flex-desktop">
+          <div className="compo-card">
+            <a href="#" className="card-img">
+              <img src={cardImg1} alt="card-img" />
+            </a>
+            <div className="card-profile">
+              <div className="profile-img">
+                <img src={ava} alt="ava"/>
+              </div>
+              <div className="profile-info">
+                <h4 className="profile-name">Jenny Wilson</h4>
+                <h5 className="profile-date">May 9, 2023</h5>
+              </div>
+            </div>
+            <a href="#">
+              <h3 className="card-title">Meet an web designer in his studio in Amsterdam</h3>
+            </a>
+            <p className="card-text">We'll get to know the designer and their design philosophy, as well as take a look...</p>
+            <div className="card-tags">
+              <span className="card-tag">UI/UX</span>
+              <span className="card-tag">Studio</span>
+              <span className="card-tag">Web Design</span>
+              <span className="card-tag-summary">+2</span>
+            </div>
+          </div>
+        </div>
+        <button className="btn btn--blue">Load more</button>
       </section>
     </>
   );
