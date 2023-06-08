@@ -18,7 +18,7 @@ function Accordion(props) {
           </span>
         </button>
         <div className="answer">
-          {isActive && (
+          {isActive ?
             <p className="answer-text">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -26,8 +26,8 @@ function Accordion(props) {
               type and scrambled it to make a type specimen book. It has
               survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged.
-            </p>
-          )}
+            </p> : null
+          }
         </div>
       </div>
     </>

@@ -643,4 +643,68 @@ a{
     width: fit-content;
     margin: 0 auto;
   }
+  @media (min-width:1024px){
+    margin-bottom: 40px;
+  }
+}
+
+.subs-container{
+  padding: 64px 0;
+}
+
+.subs{
+  background: url(./assets/subscribe/subscribe-bg-mobile.jpg);
+  background-size: cover;
+  @media (min-width :768px){
+    background: url(./assets/subscribe/subscribe-bg-desktop.jpg);
+    background-size: cover;
+  }
+  @media (min-width : 1216px){
+    max-width: 1216px;
+    padding: 64px;
+    border-radius: 32px;
+  }
+}
+
+.subs-headline{
+  padding: 0;
+  text-align: start;
+  @media (min-width:768px){
+    margin-bottom: 40px;
+  }
+}
+
+.subs-title{
+  color: $darkblue2;
+  margin-bottom: 16px;
+  @media (min-width:1024px){
+    width: 692px;
+  }
+}
+
+.subs-desc{
+  color: $darkblue2;
+  @media (min-width: 1024px){
+    margin: 0;
+  }
+}
+
+.compo-input{
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 100%;
+  @media (min-width:768px){
+    width: 320px;
+  }
+}
+
+.subs-contents{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @media (min-width: 768px){
+    flex-direction: row;
+    gap: 16px;
+  }
 }

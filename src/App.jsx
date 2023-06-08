@@ -243,6 +243,18 @@ function App() {
           <button className="btn btn--blue">Load more</button>
         </div>
       </section>
+      <section className="container subs-container">
+        <div className="compo subs">
+          <div className="compo-headline subs-headline">
+            <h2 className="compo-headline-title subs-title">Enter your e-mail address and get started for free</h2>
+            <p className="compo-headline-desc subs-desc">Stay up to date with the most relevant information, our new collections, news and special offers!</p>
+          </div>
+          <div className="subs-contents">
+            <input className="compo-input" type="email" placeholder="Your e-mail address"/>
+            <button className="btn btn--blue">Subscribe</button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
