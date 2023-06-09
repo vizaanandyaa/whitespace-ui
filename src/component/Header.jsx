@@ -8,9 +8,9 @@ function Header() {
     <>
       <header className="header-section">
         <div className="header-wrapper">
-          <a className="header-logo">
-            <img className="header-logo-img" src={logo} alt="logo" />
-            <img className="header-logo-text" src={logoText} alt="logotext" />
+          <a className="logo">
+            <img className="logo-img" src={logo} alt="logo" />
+            <img className="logo-text" src={logoText} alt="logotext" />
           </a>
           <div className="header-navbar-btn">
             <button className="header-btn">

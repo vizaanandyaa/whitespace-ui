@@ -26,6 +26,7 @@ import cardImg3 from "./assets/blog/card-img3.jpg";
 import ava from "./assets/blog/Avatar.jpg";
 import emailIcon from "./assets/faq/Email.png";
 import Accordion from "./component/Accordion";
+import Footer from "./component/Footer";
 import "./App.scss";
 function App() {
   let featuresContents = [
@@ -80,7 +81,16 @@ function App() {
     { type: "studio", text: "Studio" },
     { type: "webDesign", text: "Web Design" },
   ];
-  let clientsLogo = [client1,client2,client3,client4,client5,client6,client7,client8]
+  let clientsLogo = [
+    client1,
+    client2,
+    client3,
+    client4,
+    client5,
+    client6,
+    client7,
+    client8,
+  ];
   return (
     <>
       <Header />
@@ -304,13 +314,16 @@ function App() {
           <h2 className="compo-headline-title no-margin">Our Clients</h2>
         </div>
         <div className="compo-clients">
-          {clientsLogo.map((clientLogo,index)=>{
-            return(
-              <a className="client-logo" href="#" key={index}><img src={clientLogo} alt="clientLogo" /></a>
-            )
+          {clientsLogo.map((clientLogo, index) => {
+            return (
+              <a className="client-logo" href="#" key={index}>
+                <img src={clientLogo} alt="clientLogo" />
+              </a>
+            );
           })}
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

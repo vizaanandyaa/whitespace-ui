@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 @import "./scss/header.scss";
 @import "./scss/accordion.scss";
+@import "./scss/footer.scss";
 
 * {
   margin: 0;
@@ -13,7 +14,7 @@ button {
   cursor: pointer;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -344,7 +345,7 @@ a{
     font-size: 18px;
     line-height: 28px;
   }
-  @media (min-width:1024px) {
+  @media (min-width: 1024px) {
     width: 650px;
     margin: 0 auto;
   }
@@ -373,7 +374,7 @@ a{
   display: inline-block;
 }
 
-.no-margin{
+.no-margin {
   margin: 0;
 }
 
@@ -481,9 +482,9 @@ a{
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    @media (min-width: 768px){
-        font-size: 18px;
-        line-height: 28px;
+    @media (min-width: 768px) {
+      font-size: 18px;
+      line-height: 28px;
     }
   }
 }
@@ -492,244 +493,244 @@ a{
   margin-top: 40px;
 }
 
-.accordions{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    @media (min-width: 768px){
-      gap: 16px;
-    }
+.accordions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @media (min-width: 768px) {
+    gap: 16px;
+  }
 }
 
-.modal{
+.modal {
   margin-top: 24px;
   background: $lightblue;
   border-radius: 20px;
   padding: 24px;
   text-align: center;
   color: $darkblue2;
-  @media (min-width:768px){
+  @media (min-width: 768px) {
     max-width: 527px;
     margin: 40px auto 0;
   }
 }
 
-.modal-title{
+.modal-title {
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 12px;
 }
 
-.modal-text{
+.modal-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 32px;
 }
 
-.btn-modal{
+.btn-modal {
   margin: 0 auto;
 }
 
-.card-img{
+.card-img {
   margin-bottom: 16px;
   display: block;
 }
 
-.card-img img{
+.card-img img {
   width: 100%;
   display: block;
 }
 
-.card-profile{
+.card-profile {
   display: flex;
   gap: 8px;
   align-items: center;
   margin-bottom: 12px;
 }
 
-.profile-img{
+.profile-img {
   width: 32px;
 }
 
-.profile-img img{
+.profile-img img {
   width: 100%;
   display: block;
 }
 
-.profile-name{
+.profile-name {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   color: $lightblack;
 }
 
-.profile-date{
+.profile-date {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: $gray2;
 }
 
-.card-title{
+.card-title {
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
   color: $lightblack2;
   margin-bottom: 10px;
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-.card-text{
+.card-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: $lightblack;
   margin-bottom: 16px;
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     margin-bottom: 24px;
   }
 }
 
-.card-tags{
+.card-tags {
   display: flex;
   gap: 4px;
   padding-bottom: 16px;
-  @media (min-width:768px){
-    padding-bottom:24px ;
+  @media (min-width: 768px) {
+    padding-bottom: 24px;
   }
 }
 
-.card-tag{
+.card-tag {
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   padding: 2px 8px;
   border-radius: 150px;
-  &.--summary{
+  &.--summary {
     color: $lightblack;
     background: $lightgrey2;
   }
 }
 
-.ui{
+.ui {
   color: $darkblue3;
   background: $lightblue2;
 }
 
-.studio{
+.studio {
   color: $blue;
   background: $lightblue3;
 }
 
-.webDesign{
+.webDesign {
   color: $tosca;
   background: $lighttosca;
 }
 
-.compo-blog{
+.compo-blog {
   margin-bottom: 16px;
   align-items: start;
-  @media (min-width:768px){
+  @media (min-width: 768px) {
     margin-bottom: 32px;
   }
-  @media (min-width:1024px){
+  @media (min-width: 1024px) {
     padding-top: 32px;
   }
 }
 
-.compo-btn{
-  @media (min-width:768px){
+.compo-btn {
+  @media (min-width: 768px) {
     width: fit-content;
     margin: 0 auto;
   }
-  @media (min-width:1024px){
+  @media (min-width: 1024px) {
     margin-bottom: 40px;
   }
 }
 
-.subs-container{
+.subs-container {
   padding: 64px 0;
 }
 
-.subs{
+.subs {
   background: url(./assets/subscribe/subscribe-bg-mobile.jpg);
   background-size: cover;
-  @media (min-width :768px){
+  @media (min-width: 768px) {
     background: url(./assets/subscribe/subscribe-bg-desktop.jpg);
     background-size: cover;
   }
-  @media (min-width : 1216px){
+  @media (min-width: 1216px) {
     max-width: 1216px;
     padding: 64px;
     border-radius: 32px;
   }
 }
 
-.subs-headline{
+.subs-headline {
   padding: 0;
   text-align: start;
-  @media (min-width:768px){
+  @media (min-width: 768px) {
     margin-bottom: 40px;
   }
 }
 
-.subs-title{
+.subs-title {
   color: $darkblue2;
   margin-bottom: 16px;
-  @media (min-width:1024px){
+  @media (min-width: 1024px) {
     width: 692px;
   }
 }
 
-.subs-desc{
+.subs-desc {
   color: $darkblue2;
-  @media (min-width: 1024px){
+  @media (min-width: 1024px) {
     margin: 0;
   }
 }
 
-.compo-input{
+.compo-input {
   border: none;
   border-radius: 8px;
   padding: 10px 12px;
   width: 100%;
-  @media (min-width:768px){
+  @media (min-width: 768px) {
     width: 320px;
   }
 }
 
-.subs-contents{
+.subs-contents {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     flex-direction: row;
     gap: 16px;
   }
 }
 
-.compo-clients{
+.compo-clients {
   display: grid;
-  gap : 60px;
-  @media (min-width:768px){
+  gap: 60px;
+  @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (min-width:1024px){
+  @media (min-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.client-logo{
+.client-logo {
   display: block;
   width: 100%;
 }
 
-.client-logo img{
+.client-logo img {
   margin: 0 auto;
   width: 50%;
   display: block;
