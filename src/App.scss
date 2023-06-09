@@ -373,6 +373,10 @@ a{
   display: inline-block;
 }
 
+.no-margin{
+  margin: 0;
+}
+
 .features-texts {
   color: $darkblue2;
   margin-bottom: 24px;
@@ -707,4 +711,26 @@ a{
     flex-direction: row;
     gap: 16px;
   }
+}
+
+.compo-clients{
+  display: grid;
+  gap : 60px;
+  @media (min-width:768px){
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width:1024px){
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.client-logo{
+  display: block;
+  width: 100%;
+}
+
+.client-logo img{
+  margin: 0 auto;
+  width: 50%;
+  display: block;
 }

@@ -12,11 +12,19 @@ import featuresImg1 from "./assets/features/features-img1.jpg";
 import featuresImg2 from "./assets/features/features-img2.jpg";
 import featuresImg3 from "./assets/features/features-img3.jpg";
 import featuresImg4 from "./assets/features/features-img4.jpg";
+import client1 from "./assets/clients/client1.png";
+import client2 from "./assets/clients/client2.png";
+import client3 from "./assets/clients/client3.png";
+import client4 from "./assets/clients/client4.png";
+import client5 from "./assets/clients/client5.png";
+import client6 from "./assets/clients/client6.png";
+import client7 from "./assets/clients/client7.png";
+import client8 from "./assets/clients/client8.png";
 import cardImg1 from "./assets/blog/card-img1.jpg";
 import cardImg2 from "./assets/blog/card-img2.jpg";
 import cardImg3 from "./assets/blog/card-img3.jpg";
-import ava from "./assets/blog/Avatar.jpg"
-import emailIcon from "./assets/faq/Email.png"
+import ava from "./assets/blog/Avatar.jpg";
+import emailIcon from "./assets/faq/Email.png";
 import Accordion from "./component/Accordion";
 import "./App.scss";
 function App() {
@@ -50,8 +58,29 @@ function App() {
     "04. How can i contact customer support?",
     "05. What payment methods do you accept?",
   ];
-  let blogs = [{title : 'Meet an web designer in his studio in Amsterdam',img : cardImg1, desc:"We'll get to know the designer and their design philosophy, as well as take a look..."},{title : "The Evolution of UI/UX Design: From Skeuomorphism to Flat Design",img:cardImg2,desc:"Discussing the shift from realistic designs to minimalistic, flat designs."},{title:"The Importance of User-Centered Design in IT Projects",img:cardImg3,desc:"Exploring the significance of putting the user first in IT projects"}]
-  let categories = [{type:'ui', text:'UI/UX'},{type:'studio', text:'Studio'},{type:'webDesign', text:'Web Design'}]
+  let blogs = [
+    {
+      title: "Meet an web designer in his studio in Amsterdam",
+      img: cardImg1,
+      desc: "We'll get to know the designer and their design philosophy, as well as take a look...",
+    },
+    {
+      title: "The Evolution of UI/UX Design: From Skeuomorphism to Flat Design",
+      img: cardImg2,
+      desc: "Discussing the shift from realistic designs to minimalistic, flat designs.",
+    },
+    {
+      title: "The Importance of User-Centered Design in IT Projects",
+      img: cardImg3,
+      desc: "Exploring the significance of putting the user first in IT projects",
+    },
+  ];
+  let categories = [
+    { type: "ui", text: "UI/UX" },
+    { type: "studio", text: "Studio" },
+    { type: "webDesign", text: "Web Design" },
+  ];
+  let clientsLogo = [client1,client2,client3,client4,client5,client6,client7,client8]
   return (
     <>
       <Header />
@@ -191,9 +220,12 @@ function App() {
           </div>
           <div className="modal">
             <h3 className="modal-title">Still have a questions?</h3>
-            <p className="modal-text">We're sorry we couldn't provide you with the information you were looking for. Please contact us and we'll be happy to help.</p>
+            <p className="modal-text">
+              We're sorry we couldn't provide you with the information you were
+              looking for. Please contact us and we'll be happy to help.
+            </p>
             <button className="btn btn--blue btn-w-icon btn-modal">
-            <img src={emailIcon} className="play-icon" />
+              <img src={emailIcon} className="play-icon" />
               <p>Contact us</p>
             </button>
           </div>
@@ -204,39 +236,42 @@ function App() {
           <span className="compo-tag">Blog</span>
           <h2 className="compo-headline-title">Our fresh news</h2>
           <p className="compo-headline-desc">
-          Our blog is more than just a collection of articles - it's a hub of ideas, inspiration, and thought-provoking discussions.
+            Our blog is more than just a collection of articles - it's a hub of
+            ideas, inspiration, and thought-provoking discussions.
           </p>
         </div>
         <div className="compo-contents-flex-desktop compo-blog">
-          {blogs.map((blog,index)=>{
-            return(
-            <div className="compo-card" key={index}>
-              <a href="#" className="card-img">
-                <img src={blog.img} alt="card-img" />
-              </a>
-              <div className="card-profile">
-                <div className="profile-img">
-                  <img src={ava} alt="ava"/>
+          {blogs.map((blog, index) => {
+            return (
+              <div className="compo-card" key={index}>
+                <a href="#" className="card-img">
+                  <img src={blog.img} alt="card-img" />
+                </a>
+                <div className="card-profile">
+                  <div className="profile-img">
+                    <img src={ava} alt="ava" />
+                  </div>
+                  <div className="profile-info">
+                    <h4 className="profile-name">Jenny Wilson</h4>
+                    <h5 className="profile-date">May 9, 2023</h5>
+                  </div>
                 </div>
-                <div className="profile-info">
-                  <h4 className="profile-name">Jenny Wilson</h4>
-                  <h5 className="profile-date">May 9, 2023</h5>
+                <a href="#">
+                  <h3 className="card-title">{blog.title}</h3>
+                </a>
+                <p className="card-text">{blog.desc}</p>
+                <div className="card-tags">
+                  {categories.map((category, index) => {
+                    return (
+                      <span key={index} className={`card-tag ${category.type}`}>
+                        {category.text}
+                      </span>
+                    );
+                  })}
+                  <span className="card-tag --summary">+2</span>
                 </div>
               </div>
-              <a href="#">
-                <h3 className="card-title">{blog.title}</h3>
-              </a>
-              <p className="card-text">{blog.desc}</p>
-              <div className="card-tags">
-                {categories.map((category,index)=>{
-                  return(
-                    <span key={index} className={`card-tag ${category.type}`}>{category.text}</span>
-                  )
-                })}
-                <span className="card-tag --summary">+2</span>
-              </div>
-            </div>
-            )
+            );
           })}
         </div>
         <div className="compo-btn">
@@ -246,13 +281,34 @@ function App() {
       <section className="container subs-container">
         <div className="compo subs">
           <div className="compo-headline subs-headline">
-            <h2 className="compo-headline-title subs-title">Enter your e-mail address and get started for free</h2>
-            <p className="compo-headline-desc subs-desc">Stay up to date with the most relevant information, our new collections, news and special offers!</p>
+            <h2 className="compo-headline-title subs-title">
+              Enter your e-mail address and get started for free
+            </h2>
+            <p className="compo-headline-desc subs-desc">
+              Stay up to date with the most relevant information, our new
+              collections, news and special offers!
+            </p>
           </div>
           <div className="subs-contents">
-            <input className="compo-input" type="email" placeholder="Your e-mail address"/>
+            <input
+              className="compo-input"
+              type="email"
+              placeholder="Your e-mail address"
+            />
             <button className="btn btn--blue">Subscribe</button>
           </div>
+        </div>
+      </section>
+      <section className="compo clients container">
+        <div className="compo-headline">
+          <h2 className="compo-headline-title no-margin">Our Clients</h2>
+        </div>
+        <div className="compo-clients">
+          {clientsLogo.map((clientLogo,index)=>{
+            return(
+              <a className="client-logo" href="#" key={index}><img src={clientLogo} alt="clientLogo" /></a>
+            )
+          })}
         </div>
       </section>
     </>
