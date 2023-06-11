@@ -10,7 +10,7 @@ function Header() {
         <div className="header-wrapper">
           <a className="logo">
             <img className="logo-img" src={logo} alt="logo" />
-            <img className="logo-text" src={logoText} alt="logotext" />
+            <img className="logo-text --header" src={logoText} alt="logotext" />
           </a>
           <div className="header-navbar-btn">
             <button className="header-btn">
