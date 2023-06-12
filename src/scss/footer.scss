@@ -1,1 +1,106 @@
 @import './color.scss';
+
+.footer-logo{
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.footer-desc{
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 32px;
+    color: $lightblack;
+}
+
+.footer-socmed{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.footer-socmed a{
+    width: 24px;
+}
+
+.footer-socmed-icon{
+    width: 100%;
+}
+
+.footer-headline{
+    margin-bottom: 32px;
+}
+
+.footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-link{
+    margin-bottom: 32px;
+    @media (min-width:378px){
+        width: 164px;
+    }
+}
+
+.footer-contents{
+    padding-bottom: 32px;
+    border-bottom: 1px solid $lightgrey;
+    margin-bottom: 32px;
+}
+
+.footer-contents-title{
+    margin-bottom: 16px;
+    display: block;
+    color: $lightblack2;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.footer-contents-item{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-contents-item a{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $lightblack;
+}
+
+.footer-contact-item{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-contact{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+
+.footer-contact img{
+    width: 20px;
+}
+
+.footer-contact p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.footer-footnote{
+    text-align: center;
+}
+
+.footer-footnote-title{
+    display: block;
+    margin-bottom: 12px;
+}
