@@ -31,62 +31,63 @@ function Footer() {
     { item: "+1 (500) 300 250", icon: phone },
     { item: "3891 Ranchview Dr. Richardson, CA 62639", icon: location },
   ];
-  let footnoteLinks = ['Terms of Service', 'Privacy Policy']
 
   return (
     <>
       <footer className="compo footer container">
-        <div className="footer-headline">
-          <a className="logo footer-logo">
-            <img className="logo-img" src={logo} alt="logo" />
-            <img className="logo-text" src={logoText} alt="logotext" />
-          </a>
-          <p className="footer-desc">
-            We love working with ambitious people. Let's build something great
-            together now.
-          </p>
-          <div className="footer-socmed">
-            {socmedlinks.map((socmedlink, index) => {
-              return (
-                <a href={socmedlink.link} key={index}>
-                  <img className="footer-socmed-icon" src={socmedlink.img} alt="socmed-icon" />
-                </a>
-              );
-            })}
-          </div>
-        </div>
-        <div className="footer-contents">
-          <div className="footer-links">
-            {footerLinks.map((footerLink, index) => {
-              return (
-                <div className="footer-link" key={index}>
-                  <span className="footer-contents-title">
-                    {footerLink.title}
-                  </span>
-                  <div className="footer-contents-item">
-                    {footerLink.item.map((item, index) => {
-                        return (
-                        <a href="#" key={index}>
-                            {item}
-                        </a>
-                        );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          <div className="footer-contacts">
-            <span className="footer-contents-title">Contact Us</span>
-            <div className="footer-contact-item">
-                {footerContacts.map((footerContact, index) => {
+        <div className="footer-items">
+          <div className="footer-headline">
+            <a className="logo footer-logo">
+              <img className="logo-img" src={logo} alt="logo" />
+              <img className="logo-text" src={logoText} alt="logotext" />
+            </a>
+            <p className="footer-desc">
+              We love working with ambitious people. <br/> Let's build something great
+              together now.
+            </p>
+            <div className="footer-socmed">
+              {socmedlinks.map((socmedlink, index) => {
                 return (
-                    <div className="footer-contact" key={index}>
-                    <img src={footerContact.icon} />
-                    <p>{footerContact.item}</p>
-                    </div>
+                  <a href={socmedlink.link} key={index}>
+                    <img className="footer-socmed-icon" src={socmedlink.img} alt="socmed-icon" />
+                  </a>
                 );
-                })}
+              })}
+            </div>
+          </div>
+          <div className="footer-contents">
+            <div className="footer-links">
+              {footerLinks.map((footerLink, index) => {
+                return (
+                  <div className="footer-link" key={index}>
+                    <span className="footer-contents-title">
+                      {footerLink.title}
+                    </span>
+                    <div className="footer-contents-item">
+                      {footerLink.item.map((item, index) => {
+                          return (
+                          <a href="#" key={index}>
+                              {item}
+                          </a>
+                          );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="footer-contacts">
+              <span className="footer-contents-title">Contact Us</span>
+              <div className="footer-contact-item">
+                  {footerContacts.map((footerContact, index) => {
+                  return (
+                      <div className="footer-contact" key={index}>
+                      <img src={footerContact.icon} />
+                      <p>{footerContact.item}</p>
+                      </div>
+                  );
+                  })}
+              </div>
             </div>
           </div>
         </div>
@@ -95,13 +96,9 @@ function Footer() {
                 © 2023 Whitespace UI - All rights reserved
             </span>
             <div className="footnote-child">
-                {footnoteLinks.map((footnoteLink,index)=>{
-                    return(
-                        <a key={index} href="#">
-                            {footnoteLinks.length - index > 0 && index !== 0 ? '|' + footnoteLink : footnoteLink}
-                        </a>
-                    )
-                })}
+                <a href="#">Terms of Service</a>
+                <span>|</span>
+                <a href="#">Privacy Policy</a>
             </div>
         </div>
       </footer>

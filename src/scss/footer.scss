@@ -3,6 +3,9 @@
 .footer-logo{
     justify-content: center;
     margin-bottom: 24px;
+    @media (min-width:768px){
+        justify-content: left;
+    }
 }
 
 .footer-desc{
@@ -12,12 +15,18 @@
     line-height: 24px;
     margin-bottom: 32px;
     color: $lightblack;
+    @media (min-width:768px){
+        text-align: start;
+    }
 }
 
 .footer-socmed{
     display: flex;
     justify-content: center;
     gap: 12px;
+    @media (min-width:768px){
+        justify-content: left;
+    }
 }
 
 .footer-socmed a{
@@ -26,6 +35,14 @@
 
 .footer-socmed-icon{
     width: 100%;
+    display: block;
+}
+
+.footer-items{
+    @media (min-width:1024px){
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .footer-headline{
@@ -36,6 +53,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media (min-width:768px){
+        flex-wrap: nowrap;
+    }
 }
 
 .footer-link{
@@ -49,6 +69,13 @@
     padding-bottom: 32px;
     border-bottom: 1px solid $lightgrey;
     margin-bottom: 32px;
+    @media (min-width:768px){
+        display: flex;
+        padding-bottom: 0;
+    }
+    @media (min-width:1024px){
+        width: 764px;
+    }
 }
 
 .footer-contents-title{
@@ -98,9 +125,39 @@
 
 .footer-footnote{
     text-align: center;
+    @media (min-width:768px){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 .footer-footnote-title{
     display: block;
     margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $lightblack2;
+    @media (min-width:768px){
+        margin-bottom: 0;
+    }
+}
+
+.footnote-child{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+}
+
+.footnote-child a{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $brightblue;
+}
+
+.footnote-child span{
+    color: $gray;
 }
